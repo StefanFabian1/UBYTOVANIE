@@ -19,7 +19,7 @@ export default function RightPanel() {
   const [showCols, setShowCols] = useState<boolean>(false);
 
   return (
-    <aside className="w-64 border-l bg-surface-1 p-4 text-xs text-accent flex flex-col justify-between gap-4 flex-shrink-0 sticky top-[88px] h-[calc(100vh-88px)]">
+    <aside className="w-64 border-l bg-surface-1 p-4 text-xs text-accent flex flex-col gap-4 flex-shrink-0 sticky top-[88px] max-h-[calc(100vh-88px)] overflow-y-auto">
       {columnsCtx && (
         <div className="flex flex-col gap-1">
           <button
@@ -61,7 +61,7 @@ export default function RightPanel() {
           </button>
         </div>
       )}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-auto">
         <Item icon={Wifi} label="API: online" />
         <Item icon={RefreshCw} label="Sync: 2 min" />
       </div>
