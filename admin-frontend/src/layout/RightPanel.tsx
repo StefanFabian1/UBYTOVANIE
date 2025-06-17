@@ -1,4 +1,4 @@
-import { Wifi, RefreshCw, Settings } from "lucide-react";
+import { Wifi, RefreshCw, Settings, Printer, FileDown } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { useRequestColumns, columnLabels } from "../context/RequestColumnsContext";
 import type { RequestColumn } from "../context/RequestColumnsContext";
@@ -43,6 +43,22 @@ export default function RightPanel() {
               ))}
             </div>
           )}
+          {/* Výstupy */}
+          <h4 className="mt-3 text-xs font-semibold">Výstupy</h4>
+          <button
+            className="flex items-center gap-1 rounded-md border px-2 py-1 text-xs hover:bg-surface-1"
+            onClick={() => window.print()}
+          >
+            <Printer className="h-3 w-3" />
+            Tlačiť prehľad
+          </button>
+          <button
+            className="flex items-center gap-1 rounded-md border px-2 py-1 text-xs hover:bg-surface-1"
+            onClick={() => alert("Export CSV - TODO")}
+          >
+            <FileDown className="h-3 w-3" />
+            Export CSV
+          </button>
         </div>
       )}
       <div className="flex flex-col gap-2">
