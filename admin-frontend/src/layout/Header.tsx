@@ -7,7 +7,7 @@ export default function Header() {
   const { role, setRole } = useRole();
   return (
     <header className="flex items-center justify-between border-b bg-surface-1 px-4 py-2 gap-4">
-      <h1 className="text-lg font-semibold">Ubytovací systém</h1>
+      <h1 className="text-lg font-semibold">Ubytovací systém Ahoj Maros</h1>
       <div className="flex items-center gap-4">
         <select
           value={role}
