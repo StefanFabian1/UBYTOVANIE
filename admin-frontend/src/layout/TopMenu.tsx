@@ -26,7 +26,7 @@ export default function TopMenu() {
   }, []);
 
   return (
-    <nav className="flex items-center border-b bg-surface-1 py-2 overflow-x-auto">
+    <nav className="flex items-center border-b bg-surface-1 py-2 overflow-x-auto my-1">
       <div className="hidden md:block w-64 text-xs text-accent border-r border-accent/20 pr-4 pl-4">Verzia 1.0 • {role}</div>
       <div className="flex gap-4 flex-1 px-4">
         {modules
